@@ -19,7 +19,7 @@
                 { route: 'event-aggregator*details', hash: '#event-aggregator', moduleId: 'eventAggregator/index', title: 'Events', nav: true },
                 { route: 'widgets*details', hash:'#widgets',  moduleId: 'widgets/index', title: 'Widgets', nav: true },
                 { route: 'master-detail*details', hash: '#master-detail', moduleId: 'masterDetail/index', title: 'Master Detail', nav: true },
-                { route: 'knockout-samples*details', hash: '#knockout-samples', moduleId: 'ko/helloWorld2/index', title: 'Knockout Samples', nav: true },
+                { route: 'knockout-samples*details', hash: '#knockout-samples', moduleId: 'ko/index', title: 'Knockout Samples', nav: true },
                 { route: 'extras*details', hash: '#extras', moduleId: 'extras/index', title: 'Extras', nav: true }
             ]).buildNavigationModel();
 
