@@ -1,4 +1,4 @@
-﻿define(['knockout'], function (ko) {
+﻿define(['knockout','jquery'], function (ko,$) {
     //VARIABLES
     var self = this;
     
