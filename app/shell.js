@@ -20,7 +20,7 @@
                 { route: 'widgets*details', hash:'#widgets',  moduleId: 'widgets/index', title: 'Widgets', nav: true },
                 { route: 'master-detail*details', hash: '#master-detail', moduleId: 'masterDetail/index', title: 'Master Detail', nav: true },
                 { route: 'knockout-samples*details', hash: '#knockout-samples', moduleId: 'ko/index', title: 'Knockout Samples', nav: true },
-                { route: 'shaistest', hash: '#shais-samples', moduleId: 'ko/helloWorld2/index', title: 'Shais Test', nav: false },
+                { route: 'shaistest',moduleId: 'ko/helloWorld2/index', title: 'Shais Test', nav: false },
                 { route: 'extras*details', hash: '#extras', moduleId: 'extras/index', title: 'Extras', nav: true }
             ]).buildNavigationModel();
 
