@@ -52,7 +52,7 @@
 
     function activate(){
        
-       return getFakeData;
+      // return getFakeData;
    }
    
    function viewAttached(){
