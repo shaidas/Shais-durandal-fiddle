@@ -30,6 +30,7 @@
     };
     
     var getFakeData = function(){
+        alert('in');
       $.ajax("/echo/json/", {
             data: {
                 json: ko.toJSON({
