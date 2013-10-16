@@ -1,21 +1,61 @@
 ﻿define(['knockout'], function (ko) {
-    var firstName = ko.observable("updateMe");
-    var lastName = ko.observable("meTooPlease");
-
-    var fullName = ko.computed(function () {
-        // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
-        return firstName() + " " + lastName();
-    });
+    //VARIABLES
+    var self = this;
+    
+    var fakeData = [{
+    "title": "Wire the money to Panama",
+    "isDone": true},
+{
+    "title": "Get hair dye, beard trimmer, dark glasses and \"passport\"",
+    "isDone": false},
+{
+    "title": "Book taxi to airport",
+    "isDone": false},
+{
+    "title": "Arrange for someone to look after the cat",
+    "isDone": false}];
+    
+    var ajaxTest = ko.observable("Test1");
+    
+    
+    
+    //END VARIABLES
 
     return  {
-        firstName: firstName,
-        lastName: lastName,
-        fullName: fullName,
-        activate: activate
+        
+        activate: activate,
+        viewAttached:viewAttached,
+        getFakeData:getFakeData,
+        ajaxTest:ajaxTest
+    };
+    
+    var getFakeData = function(){
+      $.ajax("/echo/json/", {
+            data: {
+                json: ko.toJSON({
+                    tasks: this.tasks
+                })
+            },
+            type: "POST",
+            dataType: 'json'
+            
+        }).done(  function(result) {
+                
+               self.ajaxTest('Got fake data');
+                  alert('ajax call complete..variable value is ' + self.ajaxTest() );
+            });
+        
+        
     };
 
+
     function activate(){
-       firstName("Planet");
-       lastName("Earth");
+       
+       return getFakeData;
    }
+   
+   function viewAttached(){
+        //getFakeData;
+   }
+   
 });
