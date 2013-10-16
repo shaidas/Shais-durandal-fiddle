@@ -29,7 +29,7 @@
         ajaxTest:ajaxTest
     };
     
-    var getFakeData = function(){
+      function getFakeData (){
         alert('in');
       $.ajax("/echo/json/", {
             data: {
